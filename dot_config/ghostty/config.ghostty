@@ -1,0 +1,36 @@
+# 全局快捷键
+keybind = global:alt+1=toggle_quick_terminal
+
+# 从顶部出现
+quick-terminal-position = bottom
+
+# 高度比例
+quick-terminal-size = 40%
+
+# 点击别的窗口自动隐藏
+quick-terminal-autohide = true
+
+quick-terminal-screen = macos-menu-bar
+
+# Dock 不显示
+macos-hidden = always
+
+# 外观
+theme = iTerm2 Smoooooth
+background-opacity = 0.75
+background-blur-radius = 25
+font-size = 14
+window-padding-x = 6
+window-padding-y = 6
+
+copy-on-select = true
+auto-update = check
+link-url = true
+
+window-colorspace = display-p3
+
+shell-integration-features = cursor,sudo,title
+
+palette = 8=#8a8a8a
+
+custom-shader = /Users/yangtianzhe/.config/ghostty/shaders/custom.glsl
