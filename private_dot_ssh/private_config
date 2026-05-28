@@ -1,0 +1,43 @@
+Host dev
+    HostName 7.27.83.239
+    Port 32200
+    ForwardAgent yes
+    ControlMaster auto
+    ControlPath ~/.ssh/%r@%h:%p
+
+Host home
+    HostName xxxxx.com
+    Port 28822
+
+Host home-pc
+    HostName 192.168.31.2
+
+Host home-openwrt
+    HostName 192.168.31.4
+    User root
+
+Host home-box
+    HostName 192.168.31.7
+    Port 32200
+    
+Host home-pve
+    HostName 192.168.31.8
+
+Host home-deck
+    HostName 192.168.31.19
+    User deck
+
+Host home-server
+    HostName 192.168.31.26
+
+# Group config
+Host home-*
+    ProxyJump home
+    Port 22
+    ControlMaster auto
+    ControlPath ~/.ssh/%r@%h:%p
+
+Host *
+    User xxxxx
+    AddKeysToAgent yes
+    SetEnv TERM=xterm-256color
