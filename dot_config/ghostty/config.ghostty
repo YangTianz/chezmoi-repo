@@ -9,7 +9,6 @@ quick-terminal-size = 40%
 
 # 点击别的窗口自动隐藏
 quick-terminal-autohide = true
-
 quick-terminal-screen = macos-menu-bar
 
 # Dock 不显示
@@ -22,15 +21,12 @@ background-blur-radius = 25
 font-size = 14
 window-padding-x = 6
 window-padding-y = 6
+window-colorspace = display-p3
+palette = 8=#8a8a8a
+custom-shader = /Users/yangtianzhe/.config/ghostty/shaders/custom.glsl
 
 copy-on-select = true
 auto-update = check
 link-url = true
 
-window-colorspace = display-p3
-
 shell-integration-features = cursor,sudo,title
-
-palette = 8=#8a8a8a
-
-custom-shader = /Users/yangtianzhe/.config/ghostty/shaders/custom.glsl
