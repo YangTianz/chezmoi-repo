@@ -1,0 +1,43 @@
+[alias]
+	st = status
+	co = checkout
+	br = branch
+	pul = pull
+	clear = reset --hard HEAD
+	wt = worktree
+	cp = cherry-pick
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[pull]
+	rebase = true
+[push]
+	autoSetupRemote = true
+[credential]
+	helper = cache --timeout=40000
+[fetch]
+	prune = true
+
+# git delta diff config
+[core]
+    pager = delta
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true  # use n and N to move between diff sections
+    dark = true      # or light = true, or omit for auto-detection
+[merge]
+    conflictStyle = zdiff3
+
+[user]
+	name = YangTianz
+	email = tingerytz@gmail.com
+
+[includeIf "hasconfig:remote.*.url:*://*netease.com/**"]
+	path = ~/.gitconfig-work
+[includeIf "hasconfig:remote.*.url:*://*netease.com:*/**"]
+	path = ~/.gitconfig-work
+[includeIf "hasconfig:remote.*.url:*@*netease.com:*/**"]
+	path = ~/.gitconfig-work
